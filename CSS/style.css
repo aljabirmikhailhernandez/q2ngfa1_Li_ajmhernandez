@@ -1,0 +1,69 @@
+*{ margin: 0; text-decoration: none;}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.links a{ margin-left: 1vw; color: #E2E8CE; }
+
+a{
+    text-decoration: none;
+    color: #32292F;
+}
+
+nav{
+    display: flex;
+    background-color: #353434;
+    justify-content: space-around;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    color: #E2E8CE;
+    position: relative;
+}
+
+
+.icon{
+    background: url(../images/sprite3.png);
+    width: 66px;
+    height: 66px;
+    display: inline-block; 
+}
+#facebook{ background-position: -587px -72px; }
+#insta{ background-position: -290px -221px; }
+#youtube{ background-position: -439px -221px; }
+#pinterest{ background-position: -141px -221px; }
+
+
+@media screen and (max-width: 600px) {
+    nav{
+        position: relative;
+        background-color: #8d9e85;
+    }
+    .pagetitle{
+        background-color: #D64933;
+        padding: 1vw;
+        color: #E2E8CE;
+    }
+    
+    .links{
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background-color: #D64933;
+        min-width: 100vw;
+        box-shadow: 0px 8px 16px black;
+    }
+    .links a{
+        color:#E2E8CE;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        display: block;
+    }
+    
+    .links a:hover{background-color: #353434; transition: 1s;}
+    nav:hover .links{display: block; transition: 1s;}
+    nav:hover .pagetitle{background-color: #8d9e85; transition: 1s;}
+}
+
